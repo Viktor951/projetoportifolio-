@@ -6,7 +6,7 @@
 
    :root{
         --text-color: white;
-        --bg-url: url(./assets/bg-desktop.jpg);
+        --bg-url: url(./assets/bg-mobile.jpg);
         --stroke-color: rgba(255, 255, 255, 0.5);
         --surface-color: rgba(255, 255, 255, 0.05);
         --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -16,7 +16,7 @@
 
    .light{
       --text-color: black;
-      --bg-url: url(./assets/bg-desktop-light.jpg);
+      --bg-url: url(./assets/bg-mobile-light.jpg);
       --stroke-color: rgba(0, 0, 0, 0.5);
       --surface-color: rgba(0, 0, 0, 0.05);
       --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -29,18 +29,21 @@
    
    body {
      background: var(--bg-url)  no-repeat top center/cover;
-     zoom: 1
+     background-repeat: no-repeat;
+     background-position: top center;
+     background-size: cover;
+     height: 100vh;
    }
+
    body * {
      font-family: "Inter", sans-serif;
      color: var(--text-color);
    }
    #container {
-     width: 25%;
+     width: 100%;
      max-width: 588px;
      margin: 56px auto 0px;
-     padding: 0 24px;
-    
+     padding: 0 24px; 
    }
    
    #profile {
@@ -49,14 +52,9 @@
      
    }
    #switch {
-       
-    
     position: relative;
     width: 64px;
     margin: 4px auto;
-    
-
-
    }
 
    #switch button {  
@@ -72,9 +70,6 @@
        transform: translateY(-50%);
        top: 50%;
        animation: slide-back .3s;
-       
-       
-
    }
 
    .light #switch button{
@@ -83,7 +78,6 @@
    }
    #switch button:hover {
     outline: 8px solid var(--hightlight-color);
-
    }
 
    #switch span{
@@ -95,36 +89,29 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
-    
-   }
+    }
    #profile img {
      width: 112px;
      margin: auto;
      border-radius: 100px; /* Adicionar borda aredonada no escopo da imagem */
-     padding: auto;
-     
-       
+     padding: auto;   
    }
    #profile p {
      font-weight: 500;
       font-size: 13px;
      line-height: 24px;
      margin-top: 24px;
-     
-     
-   }
-   
+         
+   }  
    /*links */
    ul{
    list-style: none;
    display: flex;
    flex-direction: column;
    gap: 16px;
-   padding: 24px;
-   
-   
-   }
-   
+   padding: 24px;   
+ 
+  }
    ul li a {
      justify-content: center;
      display: flex; 
@@ -147,12 +134,10 @@
    ul li a:hover{   
    background: var(--surface-color-hover);
    border: 1.5px solid var(--text-color);
-   
-   
    }
    
    
-  #social-links {
+#social-links {
 display: flex;
 padding: 24px 0;
 justify-content: center;
@@ -171,13 +156,12 @@ font-size: 24px;
   
   }
 
-  #social-links a:hover{    /* modificar apenas os icones/links */
-   
+  #social-links a:hover {    /* modificar apenas os icones/links */   
     background: var(--hightlight-color);
     border-radius: 50%;
   }
 
-@keyframes slide-in{
+@keyframes slide-in {
  from{
   left: 0;
  }
@@ -191,8 +175,7 @@ font-size: 24px;
   from{
     left: 50%
   }
-  to{
+  to { 
    left: 0;
-
   }
 }
