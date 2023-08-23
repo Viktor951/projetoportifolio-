@@ -36,9 +36,10 @@
      color: var(--text-color);
    }
    #container {
-     width: 360px;
+     width: 25%;
+     max-width: 588px;
      margin: 56px auto 0px;
-     margin: auto;
+     padding: 0 24px;
     
    }
    
@@ -70,15 +71,18 @@
        left: 0;
        transform: translateY(-50%);
        top: 50%;
+       animation: slide-back .3s;
        
        
 
    }
 
    .light #switch button{
-    right: 0;
-    left: initial;
-     
+    animation: slide-in 0.4s forwards;
+
+   }
+   #switch button:hover {
+    outline: 8px solid var(--hightlight-color);
 
    }
 
@@ -173,3 +177,22 @@ font-size: 24px;
     border-radius: 50%;
   }
 
+@keyframes slide-in{
+ from{
+  left: 0;
+ }
+ to{
+  left :50%;
+ }
+
+}
+
+@keyframes slide-back{
+  from{
+    left: 50%
+  }
+  to{
+   left: 0;
+
+  }
+}
