@@ -1,0 +1,175 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+   :root{
+        --text-color: white;
+        --bg-url: url(./assets/bg-desktop.jpg);
+        --stroke-color: rgba(255, 255, 255, 0.5);
+        --surface-color: rgba(255, 255, 255, 0.05);
+        --surface-color-hover: rgba(0, 0, 0, 0.02);
+        --hightlight-color: rgba(255, 255, 255, 0.2);
+        --switch-bg-url: url(./assets/moon-stars.svg)
+   }
+
+   .light{
+      --text-color: black;
+      --bg-url: url(./assets/bg-desktop-light.jpg);
+      --stroke-color: rgba(0, 0, 0, 0.5);
+      --surface-color: rgba(0, 0, 0, 0.05);
+      --surface-color-hover: rgba(0, 0, 0, 0.02);
+      --hightlight-color: rgba(0, 0, 0, 0.1);
+      --switch-bg-url: url(./assets/sun.svg);
+      
+      
+
+   }
+   
+   body {
+     background: var(--bg-url)  no-repeat top center/cover;
+     zoom: 1
+   }
+   body * {
+     font-family: "Inter", sans-serif;
+     color: var(--text-color);
+   }
+   #container {
+     width: 360px;
+     margin: 56px auto 0px;
+     margin: auto;
+    
+   }
+   
+   #profile {
+     text-align: center; /*centraliza elemento no cetro do bloco */
+     padding: 24px;
+     
+   }
+   #switch {
+       
+    
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+    
+
+
+   }
+
+   #switch button {  
+
+       width: 32px;
+       height: 32px;
+       background: white var(--switch-bg-url) no-repeat center;
+       border: 0;
+       border-radius: 50%;
+       position: absolute;
+       z-index: 1;
+       left: 0;
+       transform: translateY(-50%);
+       top: 50%;
+       
+       
+
+   }
+
+   .light #switch button{
+    right: 0;
+    left: initial;
+     
+
+   }
+
+   #switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+    
+   }
+   #profile img {
+     width: 112px;
+     margin: auto;
+     border-radius: 100px; /* Adicionar borda aredonada no escopo da imagem */
+     padding: auto;
+     
+       
+   }
+   #profile p {
+     font-weight: 500;
+      font-size: 13px;
+     line-height: 24px;
+     margin-top: 24px;
+     
+     
+   }
+   
+   /*links */
+   ul{
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   padding: 24px;
+   
+   
+   }
+   
+   ul li a {
+     justify-content: center;
+     display: flex; 
+     align-items: center;
+     padding: 16px 24px;
+     background: var(--surface-color);
+     border: 1px solid var(--stroke-color);
+     border-radius: 8px;
+   
+     backdrop-filter: blur(4px);
+     -webkit-backdrop-filter: blur(4px);
+     text-decoration: none;
+     font-weight: 500;
+     transition: background 0.2s;  /* transição de 2s ao passar mouse*/
+
+     
+   }
+   
+   /* pseudo-seletor */
+   ul li a:hover{   
+   background: var(--surface-color-hover);
+   border: 1.5px solid var(--text-color);
+   
+   
+   }
+   
+   
+  #social-links {
+display: flex;
+padding: 24px 0;
+justify-content: center;
+
+font-size: 24px;
+
+  }
+
+  #social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;  /* transição de 2s ao passar mouse*/
+    border-radius: 50%;
+  
+  }
+
+  #social-links a:hover{    /* modificar apenas os icones/links */
+   
+    background: var(--hightlight-color);
+    border-radius: 50%;
+  }
+
