@@ -6,8 +6,8 @@
 
    :root{
         --text-color: white;
-        --bg-url: url(./assets/bg-desktop.jpg);
-        --stroke-color: rgba(255, 255, 255, 0.5);
+        --bg-url: url(./assets/purplewallpaper.jpg);
+        --stroke-color: black;
         --surface-color: rgba(255, 255, 255, 0.05);
         --surface-color-hover: rgba(0, 0, 0, 0.02);
         --hightlight-color: rgba(255, 255, 255, 0.2);
@@ -50,6 +50,8 @@
      text-align: center; /*centraliza elemento no cetro do bloco */
      padding: 24px;
      
+     
+          
    }
    #switch {
     position: relative;
@@ -91,10 +93,11 @@
     border-radius: 9999px;
     }
    #profile img {
-     width: 112px;
+     width: 143px;
      margin: auto;
      border-radius: 100px; /* Adicionar borda aredonada no escopo da imagem */
      padding: auto;   
+     
    }
    #profile p {
      font-weight: 500;
