@@ -6,7 +6,7 @@
 
    :root{
         --text-color: white;
-        --bg-url: url(./assets/purplewallpaper.jpg);
+        --bg-url: url(./assets/bg-desktop.jpg);
         --stroke-color: black;
         --surface-color: rgba(255, 255, 255, 0.05);
         --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -29,10 +29,15 @@
    
    body {
      background: var(--bg-url)  no-repeat top center/cover;
+<<<<<<< HEAD
+     
+     height: 100vh;
+=======
      background-repeat: no-repeat;
      background-position: top center;
      background-size: cover;
      height: 100vh;
+>>>>>>> c4cd26e0031e4a5faebbdb721990bd3a8b7dc706
    }
 
    body * {
@@ -43,7 +48,13 @@
      width: 100%;
      max-width: 588px;
      margin: 56px auto 0px;
+<<<<<<< HEAD
+     padding: 0 24px;
+     
+    
+=======
      padding: 0 24px; 
+>>>>>>> c4cd26e0031e4a5faebbdb721990bd3a8b7dc706
    }
    
    #profile {
